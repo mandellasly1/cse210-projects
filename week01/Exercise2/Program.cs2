@@ -1,0 +1,192 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Ask the user for their grade percentage
+        Console.Write("Enter your grade percentage: ");
+        string input = Console.ReadLine();
+        int gradePercentage = int.Parse(input);
+
+        string letter = "";
+
+        // Determine the letter grade
+        if (gradePercentage >= 90)
+        {
+            letter = "A";
+        }
+        else if (gradePercentage >= 80)
+        {
+            letter = "B";
+        }
+        else if (gradePercentage >= 70)
+        {
+            letter = "C";
+        }
+        else if (gradePercentage >= 60)
+        {
+            letter = "D";
+        }
+        else
+        {
+            letter = "F";
+        }
+
+        // Print the letter grade once
+        Console.WriteLine($"Your grade is: {letter}");
+
+        // Check if the user passed (>= 70)
+        if (gradePercentage >= 70)
+        {
+            Console.WriteLine("Congratulations! You passed the course.");
+        }
+        else
+        {
+            Console.WriteLine("You did not pass. Keep working hard and you'll get it next time!");
+        }
+    }
+}
+
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Enter your grade percentage: ");
+        string input = Console.ReadLine();
+        int gradePercentage = int.Parse(input);
+
+        string letter = "";
+        string sign = "";
+
+        // Determine the letter grade
+        if (gradePercentage >= 90)
+        {
+            letter = "A";
+        }
+        else if (gradePercentage >= 80)
+        {
+            letter = "B";
+        }
+        else if (gradePercentage >= 70)
+        {
+            letter = "C";
+        }
+        else if (gradePercentage >= 60)
+        {
+            letter = "D";
+        }
+        else
+        {
+            letter = "F";
+        }
+
+        // Determine the sign (+ or -)
+        int lastDigit = gradePercentage % 10;
+
+        if (letter != "A" && letter != "F") // No A+ or F+/- allowed
+        {
+            if (lastDigit >= 7)
+            {
+                sign = "+";
+            }
+            else if (lastDigit < 3)
+            {
+                sign = "-";
+            }
+        }
+        else if (letter == "A" && lastDigit < 3)
+        {
+            sign = "-"; // Allow A-
+        }
+
+        // Print the grade with sign
+        Console.WriteLine($"Your grade is: {letter}{sign}");
+
+        // Pass/fail message
+        if (gradePercentage >= 70)
+        {
+            Console.WriteLine("Congratulations! You passed the course.");
+        }
+        else
+        {
+            Console.WriteLine("You did not pass. Keep working hard and you'll get it next time!");
+        }
+    }
+}
+
+
+ using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("What is the grade percentage? ");
+        string input = Console.ReadLine();
+        int percent = int.Parse(input);
+
+        string letter = "";
+        string sign = "";
+
+        // Determine the letter grade
+        if (percent >= 90)
+        {
+            letter = "A";
+        }
+        else if (percent >= 80)
+        {
+            letter = "B";
+        }
+        else if (percent >= 70)
+        {
+            letter = "C";
+        }
+        else if (percent >= 60)
+        {
+            letter = "D";
+        }
+        else
+        {
+            letter = "F";
+        }
+
+        // Determine the sign (+ or -)
+        int lastDigit = percent % 10;
+
+        if (letter != "F") // F never has + or -
+        {
+            if (lastDigit >= 7)
+            {
+                sign = "+";
+            }
+            else if (lastDigit < 3)
+            {
+                sign = "-";
+            }
+        }
+
+        // Special case: No A+ grade
+        if (letter == "A" && sign == "+")
+        {
+            sign = "";
+        }
+
+        // Print the grade with sign
+        Console.WriteLine($"Your grade is: {letter}{sign}");
+
+        // Pass/fail message
+        if (percent >= 70)
+        {
+            Console.WriteLine("Congratulations! You passed the course.");
+        }
+        else
+        {
+            Console.WriteLine("Better luck next time!");
+        }
+    }
+}

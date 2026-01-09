@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Call each function in order to print results
+        // Call each function in order
         DisplayWelcome();
 
         string userName = PromptUserName();
