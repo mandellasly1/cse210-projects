@@ -1,0 +1,108 @@
+
+int height;
+string color;
+
+Boxes showing variables
+
+
+height = 17;
+
+Height box getting 17
+
+
+height = 24;
+
+Height box getting 24
+
+
+public class Blind
+{
+  public double _width;
+  public double _height;
+  public string _color;
+}
+
+Large box with three smaller ones inside
+
+
+
+Blind kitchen = new Blind();
+
+Large box for kitchen
+
+
+
+kitchen._width = 60;
+kitchen._height = 48;
+kitchen._color = "white";
+
+Setting values in the kitchen box
+
+
+
+Console.WriteLine(kitchen._width);
+
+Getting values in the kitchen box
+
+
+public class Blind
+{
+    public double _width;
+    public double _height;
+    public string _color;
+    
+    public double GetArea()
+    {
+        return _width * _height;
+    }
+}
+
+
+double materialAmount = kitchen.GetArea();
+
+Kitchen with GetArea method
+
+Blind kitchen = new Blind();
+
+kitchen._width = 60;
+kitchen._height = 48;
+kitchen._color = "White";
+
+double materialAmount = kitchen.GetArea();
+
+
+
+Kitchen and Living Room
+
+
+
+public class House
+{
+    public string _owner;
+    public Blind _kitchen;
+    public Blind _livingRoom;
+}
+
+
+House johnsonHome = new House();
+
+johnsonHome._kitchen = new Blind();
+johnsonHome._livingRoom = new Bind();
+
+public class House
+{
+    public string _owner = "";
+    public Blind _kitchen = new Blind();
+    public Blind _livingRoom = new Blind();
+}
+
+
+
+House johnsonHome = new House();
+johnsonHome._owner = "Johnson Family";
+
+
+
+johnsonHome._kitchen._width = 60;
+
+Johnson Home showing all its components

@@ -1,0 +1,74 @@
+using System;
+using System.Collections.Generic;
+
+public class Job
+{
+    // Properties
+    public string Title { get; set; }
+    public string Company { get; set; }
+    public int StartYear { get; set; }
+    public int EndYear { get; set; }
+
+    // Constructor
+    public Job(string title, string company, int startYear, int endYear)
+    {
+        Title = title;
+        Company = company;
+        StartYear = startYear;
+        EndYear = endYear;
+    }
+
+    // Behavior: Display job info
+    public string Display()
+    {
+        return $"{Title} ({Company}) {StartYear}-{EndYear}";
+    }
+}
+
+public class Resume
+{
+    // Properties
+    public string Name { get; set; }
+    private List<Job> Jobs { get; set; }
+
+    // Constructor
+    public Resume(string name)
+    {
+        Name = name;
+        Jobs = new List<Job>();
+    }
+
+    // Behavior: Add a job
+    public void AddJob(Job job)
+    {
+        Jobs.Add(job);
+    }
+
+    // Behavior: Display resume
+    public void Display()
+    {
+        Console.WriteLine(Name);
+        foreach (var job in Jobs)
+        {
+            Console.WriteLine(job.Display());
+        }
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Create jobs
+        Job job1 = new Job("Software Engineer", "Microsoft", 2019, 2022);
+        Job job2 = new Job("Data Analyst", "Google", 2022, 2025);
+
+        // Create resume
+        Resume resume = new Resume("John Doe");
+        resume.AddJob(job1);
+        resume.AddJob(job2);
+
+        // Display resume
+        resume.Display();
+    }
+}

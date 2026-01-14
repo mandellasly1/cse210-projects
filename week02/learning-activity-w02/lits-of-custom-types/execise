@@ -1,0 +1,21 @@
+
+public class House
+{
+    public string _owner;
+    public List<Blind> _blinds = new List<Blind>();
+}
+
+
+johnsonHome._blinds.Add(kitchen);
+
+double amount = johnsonHome._blinds[0].GetArea();
+
+
+
+foreach (Blind b in johnsonHome._blinds)
+{
+    double amount = b.GetArea();
+}
+
+
+Johnson Home showing a list
