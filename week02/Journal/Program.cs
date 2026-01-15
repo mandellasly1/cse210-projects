@@ -1,10 +1,10 @@
 using System;
 
-/// <summary>
+
 /// Main program class.
 /// Requirement: Provide a menu for user interaction.
 /// Exceeding: Uses CSV save/load for entries.
-/// </summary>
+
 class Program
 {
     static void Main(string[] args)

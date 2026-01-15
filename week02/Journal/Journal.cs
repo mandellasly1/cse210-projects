@@ -2,26 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-/// <summary>
+
 /// Represents the journal as a collection of entries.
 /// Requirement: Add, display, save, and load entries.
 /// Exceeding: Save/load entries in CSV format.
-/// </summary>
+
 public class Journal
 {
     private List<Entry> _entries = new List<Entry>();
 
-    /// <summary>
+    
     /// Requirement: Add a new entry to the journal.
-    /// </summary>
+    
     public void AddEntry(Entry newEntry)
     {
         _entries.Add(newEntry);
     }
 
-    /// <summary>
+    
     /// Requirement: Display all entries in the journal.
-    /// </summary>
+    
     public void DisplayAll()
     {
         foreach (Entry entry in _entries)
@@ -30,10 +30,9 @@ public class Journal
         }
     }
 
-    /// <summary>
     /// Requirement: Save the journal to a file.
     /// Exceeding: Save entries in proper CSV format.
-    /// </summary>
+   
     public void SaveToFile(string filename)
     {
         using (StreamWriter outputFile = new StreamWriter(filename))
@@ -46,10 +45,10 @@ public class Journal
         Console.WriteLine("Journal saved successfully.");
     }
 
-    /// <summary>
+    
     /// Requirement: Load the journal from a file.
     /// Exceeding: Load entries from proper CSV format.
-    /// </summary>
+    
     public void LoadFromFile(string filename)
     {
         _entries.Clear();
