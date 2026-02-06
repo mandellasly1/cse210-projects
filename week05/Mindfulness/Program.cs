@@ -53,7 +53,7 @@ class Program
             }
             else if (choice == "4")
             {
-                Console.WriteLine("\nThank you Well Done. see you Soon!");
+                Console.WriteLine("\nThank you, Well Done. see you Soon!");
                 break;
             }
             else
